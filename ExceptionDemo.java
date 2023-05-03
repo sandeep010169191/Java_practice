@@ -5,6 +5,17 @@ public class ExceptionDemo {
         try {
             int i = 5;
             int j = 0;
+
+            // Custom Exception
+            if (j == 0) {
+                throw new CustomExceptionDemo("Division by 0");
+            }
+
+            // // throw keyword
+            // if (j == 0) {
+            // throw new Exception("Division by 0");
+            // }
+
             System.out.println("Result: " + (i / j));
         } catch (Exception e) {
             System.out.println(e.getMessage());

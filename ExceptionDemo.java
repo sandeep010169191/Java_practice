@@ -28,13 +28,14 @@ public class ExceptionDemo {
                 arr[i] = sc.nextInt();
             }
             System.out.println(arr);
+            sc.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
-        Integer i = null;
+        // Integer i = null;
         try {
-            int j = i.parseInt("sandeep");
+            int j = Integer.parseInt("sandeep");
             System.out.println(j);
         } catch (Exception e) {
             System.out.println(e);

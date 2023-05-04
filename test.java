@@ -2,18 +2,19 @@ import java.util.*;
 
 public class test {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter First Name: ");
-        String customerFirstName = sc.nextLine();
-        System.out.println("Enter Last Name: ");
-        String customerLastName = sc.nextLine();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter First Name: ");
+            String customerFirstName = sc.nextLine();
+            System.out.println("Enter Last Name: ");
+            String customerLastName = sc.nextLine();
 
-        showCustomer(customerFirstName, customerLastName);
+            showCustomer(customerFirstName, customerLastName);
 
-        System.out.println("How much amount would you like to deposit Mr." + customerFirstName + "?");
-        double depositAmount = sc.nextInt();
+            System.out.println("How much amount would you like to deposit Mr." + customerFirstName + "?");
+            double depositAmount = sc.nextInt();
 
-        amountToBeDeposited(depositAmount);
+            amountToBeDeposited(depositAmount);
+        }
     }
 
     public static void showCustomer(String firstName, String lastName) {
@@ -38,10 +39,11 @@ public class test {
     }
 
     public static int showPanCard() {
-        Scanner sc = new Scanner(System.in);
-        String panCard = sc.nextLine();
-        int valid = checkValidPanCard(panCard);
-        return valid;
+        try (Scanner sc = new Scanner(System.in)) {
+            String panCard = sc.nextLine();
+            int valid = checkValidPanCard(panCard);
+            return valid;
+        }
     }
 
     public static int checkValidPanCard(String pan) {

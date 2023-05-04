@@ -12,6 +12,7 @@ public class Calculator {
             storeNumber = sc.nextInt();
             sum += storeNumber;
         }
+        sc.close();
         return sum;
     }
 }

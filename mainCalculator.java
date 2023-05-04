@@ -21,5 +21,6 @@ public class mainCalculator {
                 System.out.println("Sum: " + sum);
                 break;
         }
+        sc.close();
     }
 }
